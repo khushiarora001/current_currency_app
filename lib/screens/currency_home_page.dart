@@ -1,5 +1,6 @@
 import 'package:current_currency_app/constants/app_string.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 import 'package:current_currency_app/providers/currency_provider.dart';
@@ -21,7 +22,15 @@ class _CurrencyHomePageState extends State<CurrencyHomePage> {
     final themeProvider = context.watch<ThemeProvider>();
 
     return Scaffold(
+      backgroundColor:
+          themeProvider.themeMode != ThemeMode.dark
+              ? Colors.white
+              : Colors.black,
       appBar: AppBar(
+        backgroundColor:
+            themeProvider.themeMode != ThemeMode.dark
+                ? Colors.white
+                : Colors.black,
         title: const Text(
           AppStrings.currencyConverterText,
           style: TextStyle(fontWeight: FontWeight.bold),
@@ -50,8 +59,10 @@ class _CurrencyHomePageState extends State<CurrencyHomePage> {
             TextField(
               controller: _amountController,
               keyboardType: TextInputType.number,
+              inputFormatters: [FilteringTextInputFormatter.digitsOnly],
               decoration: InputDecoration(
                 labelText: AppStrings.amountLabelText,
+
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(30),
                 ),
@@ -85,7 +96,7 @@ class _CurrencyHomePageState extends State<CurrencyHomePage> {
             currencyProvider.isLoading
                 ? const CircularProgressIndicator()
                 : Text(
-                  currencyProvider.result,
+                  "Result   ${currencyProvider.result}",
                   style: const TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,

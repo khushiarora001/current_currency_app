@@ -1,6 +1,10 @@
 # current_currency_app
 This App Allow user to convert an amount from one currency to anothter using real-time exchange rates.
+Build a simple Currency Converter App that fetches real-time exchange rates and allows users to convert amounts between two currencies.
 This is also maintain the  history  of past conversion 
+
+# Statemanagement 
+Provider 
 
 # Feature 
 Core Features: 
@@ -23,15 +27,9 @@ Core Features:
 
   •  Show an error message if the API call fails or the input is invalid. 
 
-Optional Features (Bonus): 
-
   •  Conversion History: 
 
-  •  Store and display the last 5 conversions made by the user. 
-
   •  Offline Mode: 
-
-  •  Cache the last fetched rates and use them when the app is offline. 
 
   •  Themed UI: 
 
@@ -39,16 +37,20 @@ Optional Features (Bonus):
 
   
 
-Constraints: 
-
-  •  Ensure the app is responsive and visually appealing. 
-
-  •  Use minimal external libraries for simplicity. 
-
-  •  Implement basic animations for dropdowns or button clicks (e.g., scale or fade effects) 
-
 
 
 # prerequisities
 Flutter installed 
 Working emulator or physical device 
+
+
+Setup Instructions
+1. Clone the Repository:
+git clone https://github.com/yourusername/your-repo-name.git
+2. Navigate to the Project Directory:
+3. Get Flutter Packages:
+flutter pub get
+4. Run the App:
+flutter run
+
+
