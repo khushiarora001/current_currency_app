@@ -46,7 +46,7 @@ Working emulator or physical device
 
 Setup Instructions
 1. Clone the Repository:
-git clone https://github.com/yourusername/your-repo-name.git
+git clone https://github.com/khushiarora001/current_currency_app
 2. Navigate to the Project Directory:
 3. Get Flutter Packages:
 flutter pub get
